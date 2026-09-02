@@ -78,7 +78,6 @@ cd bookstore_backend
 ### 2.Запустите контейнеры
 ```bash
 docker-compose up -d --build
-
 ```
 
 ## О проекте:
