@@ -48,7 +48,7 @@ cd <название папки>
 
 python -m venv venv
 source venv/bin/activate # Для Linux/macOS
-# venv\Scripts\activate # Для Windows
+venv\Scripts\activate    # Для Windows
 
 pip install -r requirements.txt
 
@@ -76,13 +76,11 @@ cd bookstore_backend
 ```
 
 ### 2.Запустите контейнеры
-
+```bash
 docker-compose up -d --build
+```
 
-##О проекте
-
-Это бэкенд-часть интернет-магазина книг.
-
-Фронтенд доступен в отдельном репозитории:
-[https://github.com/AnastasiaGrechanichenko/starting_page.git](https://github.com/AnastasiaGrechanichenko/starting_page.git)
+## О проекте:
+Это бэкенд-часть интернет-магазина книг. Фронтенд доступен в отдельном репозитории:
+[Bookstore_frontend](https://github.com/AnastasiaGrechanichenko/Bookstore_frontend)
 
