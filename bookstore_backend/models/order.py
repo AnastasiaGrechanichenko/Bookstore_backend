@@ -28,6 +28,10 @@ class Order(Base):
     user: Mapped["User"] = relationship(back_populates="orders")
     items: Mapped[list["OrderItem"]] = relationship(back_populates="order")
 
+    def __repr__(self):
+        return f"Order #{self.id} (user={self.user_id}, total={self.total_sum}, status={self.status})"
+
+
 
 class OrderItem(Base):
     __tablename__ = "order_items"

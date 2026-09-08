@@ -13,3 +13,6 @@ class CartItem(Base):
 
     user: Mapped["User"] = relationship(back_populates="cart_items")
     book:Mapped["Book"] = relationship(back_populates="cart_items")
+
+    def __repr__(self):
+        return f"CartItem #{self.id} (user={self.user_id}, book={self.book_id}, qty={self.quantity})"

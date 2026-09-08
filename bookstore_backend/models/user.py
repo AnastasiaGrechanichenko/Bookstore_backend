@@ -18,3 +18,6 @@ class User(Base):
     cart_items: Mapped[list["CartItem"]] = relationship(back_populates="user")
     orders: Mapped[list["Order"]] = relationship(back_populates="user")
     favorites: Mapped[list["Favorite"]] = relationship(back_populates="user")
+
+    def __repr__(self):
+        return f"Пользователь #{self.id}: '{self.login}' ({self.email})"

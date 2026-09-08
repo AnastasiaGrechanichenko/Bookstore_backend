@@ -14,3 +14,6 @@ class Book(Base):
 
     cart_items: Mapped[list["CartItem"]] = relationship(back_populates="book")
     favorites: Mapped[list["Favorite"]] = relationship(back_populates="book")
+
+    def __repr__(self):
+        return f"Книга #{self.id}: '{self.title}' — {self.author} ({self.price} руб.)"

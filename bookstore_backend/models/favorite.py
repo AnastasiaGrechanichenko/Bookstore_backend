@@ -13,3 +13,6 @@ class Favorite(Base):
     user: Mapped["User"] = relationship(back_populates="favorites")
     book: Mapped["Book"] = relationship(back_populates="favorites")
 
+    def __repr__(self):
+        return f"Favorite #{self.id} (user={self.user_id}, book={self.book_id})"
+
